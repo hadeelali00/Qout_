@@ -1,0 +1,487 @@
+/* Google Font similar to your app's rounded style */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+
+/* ------------------ Color system ------------------ */
+
+:root {
+  --mint: #A8DCD1;
+  --peach: #F4B68C;
+  --darkblue: #002A5E;
+  --soft-gray: #787878;
+  --card-bg: #FFFFFF;
+  --bg: #F9FAFA;
+}
+
+/* ------------------ Global styles ------------------ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: var(--bg);
+  color: #444;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 60px 0;
+  
+}
+
+h1, h2, h3 {
+  color: var(--darkblue);
+}
+
+/* ------------------ Hero / Header ------------------ */
+
+.hero {
+  background: linear-gradient(135deg, #FDFEFE, #F3F7F7);
+  border-bottom: 1px solid #E0E6EB;
+}
+
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*padding: 18px 0 6px;*/
+    padding: 18px 40px 6px; /* added 40px left padding */
+    
+
+}
+
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--darkblue);
+}
+
+.logo img {
+  width:100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+  font-size: 14px;
+}
+
+.nav-links a {
+  padding: 4px 8px;
+  border-radius: 999px;
+  color: #666;
+}
+
+.nav-links a:hover {
+  background: #E6F0F0;
+  color: var(--darkblue);
+}
+
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 0 70px;
+}
+
+.hero-text {
+  flex: 1 1 280px;
+  margin-top: -100px;
+}
+
+.hero-text h1 {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 17px;
+  max-width: 520px;
+  margin-bottom: 30px;
+  color: var(--soft-gray);
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 30px;
+  
+}
+
+.badge {
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #FFF7F1;
+  color: #E38D51;
+  font-weight: 600;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary {
+  padding: 12px 26px;
+  border-radius: 25px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: var(--mint);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(168, 220, 209, 0.4);
+}
+
+.btn-primary:hover {
+  background: #97C8BC;
+}
+
+.btn-secondary {
+  background: var(--peach);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(244, 182, 140, 0.4);
+}
+
+.btn-secondary:hover {
+  background: #E8A97D;
+}
+
+/* Hero side image card */
+
+.hero-image {
+  flex: 1 1 260px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  max-width: 440px;
+}
+
+.hero-card img {
+  border-radius: 16px;
+  margin-bottom: 10px;
+  height: 330px;
+  object-fit: cover;
+}
+
+.hero-card small {
+  font-size: 12px;
+  color: #777;
+}
+
+/* ------------------ Sections shared ------------------ */
+
+.section-title {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.section-title h2 {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.about-text {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 15px;
+  color: var(--soft-gray);
+}
+/* ABOUT section */
+#about {
+  background: #ffffff;
+  padding: 80px 0;
+}
+
+/* ------------------ Features ------------------ */
+/* ------------------ Features ------------------ */
+#features {
+  background: #ffffff;
+  padding: 80px 0;
+}
+
+/* 3 equal columns (NO stretching!) */
+.three-col-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  align-items: start; /* IMPORTANT: prevents column stretch */
+}
+
+/* Each column stacks features */
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Standard Feature Card */
+.feature-card {
+  background: var(--bg);
+    padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 5px rgba(0,0,0,0.03);
+  height: 220px;  /* same height for all small cards */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%; /* ensures no width expansion */
+}
+
+
+.icon-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #fce8db, #F7A76C); /* Orange gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.06); /* optional soft shadow */
+}
+
+
+.icon-wrapper img {
+  width: 26px !important;
+  height: 26px !important;
+  max-width: none !important;
+  object-fit: contain;
+}
+
+
+/* Middle BIG interface container */
+.big-card {
+   height: 270px;
+  border-radius: 20px;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+  border: none;
+  width: 100% !important;
+
+  /* 🔥 Gradient background */
+  background: linear-gradient(135deg, #fce8db, #F7A76C);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.big-card-bg {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #fce8db, #F7A76C); /* SAME as circle icon gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Fix image stretching */
+.big-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;  /* show full UI */
+  background: transparent !important; /* make sure no bg appears */
+}
+
+/* EXTRA protection to force equal widths */
+.three-col-features > * {
+  width: 100%;
+}
+
+/* Add smooth animation */
+.feature-card {
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.feature-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* ------------------ Product section ------------------ */
+
+.product-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+}
+
+.product-layout > div {
+  flex: 1 1 260px;
+}
+
+.product-photo-box {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.product-photo-placeholder {
+  height: 260px;
+  border-radius: 16px;
+  border: 1px dashed #C5CEDF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #8A93A5;
+  text-align: center;
+  padding: 10px;
+}
+
+/* ------------------ Mobile App section ------------------ */
+
+/* ------------------ Mobile App Showcase ------------------ */
+
+.app-showcase {
+  padding: 80px 0;
+  text-align: center;
+}
+#app {
+  background: #ffffff !important;
+  width: 100%;
+}
+
+#app .container {
+  background: #ffffff !important;
+}
+
+.phone-gallery {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: -40px;
+  position: relative;
+}
+
+.phone-frame {
+  width: 180px;
+  opacity: 0.45;
+  transform: translateY(20px) scale(0.85);
+  transition: 0.3s ease;
+  z-index: 1;
+}
+
+.phone-frame img {
+  width: 100%;
+  border-radius: 26px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
+}
+
+/* Center phone always more visible */
+.main-phone {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  z-index: 3;
+}
+
+/* Hover effect — hovered phone comes forward */
+.phone-frame:hover {
+  opacity: 1;
+  transform: translateY(-10px) scale(1.05);
+  z-index: 5;
+}
+
+/* ------------------ Contact ------------------ */
+
+.contact-box {
+  max-width: 500px;
+  margin: 0 auto;
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 24px 22px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+.contact-box p {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.contact-email {
+  font-weight: 700;
+  color: var(--darkblue);
+}
+
+.contact-note {
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--soft-gray);
+}
+
+/* ------------------ Footer ------------------ */
+
+footer {
+  text-align: center;
+  font-size: 12px;
+  padding: 18px 0 26px;
+  color: #7A8597;
+}
+
+/* ------------------ Responsive ------------------ */
+
+@media (max-width: 720px) {
+  .hero-text h1 {
+    font-size: 26px;
+  }
+
+  .nav-links {
+    display: none; /* keep header simple on mobile */
+  }
+
+  section {
+    padding: 45px 0;
+  }
+}
